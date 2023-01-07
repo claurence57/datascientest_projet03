@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-BASE_DIR="/home/christophe/Trav/docker/DB"
+BASE_DIR="/home/christophe/Trav/docker/datascientest_projet03"
 BASE_DOCKER="${BASE_DIR}/dockerfiles"
 API_STATUS_DIR="${BASE_DOCKER}/api_status"
 FASTAPI_DIR="${BASE_DOCKER}/fastapi"
@@ -18,10 +18,6 @@ sudo docker image build . -t projet3-api:latest
 # Build DB_CONNEXION container
 cd ${DBCONNEXION_DIR}
 sudo docker image build . -t db_connexion:latest
-#cd ${AUTHORIZATION_DIR}
-#docker image build . -t authorization:latest
-#cd ${CONTENT_DIR}
-#docker image build . -t content:latest
 
 # Launch docker-compose
 cd ${BASE_DIR}

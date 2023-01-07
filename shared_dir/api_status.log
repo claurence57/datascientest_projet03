@@ -1,0 +1,204 @@
+
+========================================
+   Projet3 API availability test
+========================================
+
+request done at "/status"
+
+expected result = 200
+actual result = 200
+
+==> SUCCESS
+
+
+========================================
+   Projet3 API availability test
+========================================
+
+request done at "/status"
+
+expected result = 200
+actual result = 200
+
+==> SUCCESS
+
+
+========================================
+   Projet3 API availability test
+========================================
+
+request done at "/status"
+
+expected result = 200
+actual result = 200
+
+==> SUCCESS
+
+
+========================================
+   Projet3 API availability test
+========================================
+
+request done at "/status"
+
+expected result = 200
+actual result = 200
+
+==> SUCCESS
+
+
+========================================
+   Projet3 API availability test
+========================================
+
+request done at "/status"
+
+expected result = 200
+actual result = 200
+
+==> SUCCESS
+
+
+========================================
+   Projet3 API availability test
+========================================
+
+request done at "/status"
+
+expected result = 200
+actual result = 200
+
+==> SUCCESS
+
+
+===================================================
+   Projet3 API connection to DB from fastapi test
+===================================================
+
+request done at "/dbconnexion"
+
+expected result = 200
+actual result = 200
+
+==> SUCCESS
+
+
+========================================
+   Projet3 API availability test
+========================================
+
+request done at "/status"
+
+expected result = 200
+actual result = 200
+
+==> SUCCESS
+
+
+===================================================
+   Projet3 connection to DB from fastapi test
+===================================================
+
+request done at "/dbconnexion"
+
+expected result = 200
+actual result = 200
+
+==> SUCCESS
+
+
+===================================================
+   Projet3 connection to DB from fastapi test
+===================================================
+
+request done at "/dbconnexion"
+
+expected result = 200
+actual result = 200
+
+==> SUCCESS
+
+
+========================================
+   Projet3 API availability test
+========================================
+
+request done at "/status"
+
+expected result = 200
+actual result = 200
+
+==> SUCCESS
+
+
+========================================
+   Projet3 API availability test
+========================================
+
+request done at "/status"
+
+expected result = 200
+actual result = 200
+
+==> SUCCESS
+
+
+===================================================
+   Projet3 connection to DB from fastapi test
+===================================================
+
+request done at "/dbconnexion"
+
+expected result = 200
+actual result = 200
+
+==> SUCCESS
+
+
+===================================================
+   Projet3 connection to DB from fastapi test
+===================================================
+
+request done at "/dbconnexion"
+
+expected result = 200
+actual result = 200
+
+==> SUCCESS
+
+
+========================================
+   Projet3 API availability test
+========================================
+
+request done at "/status"
+
+expected result = 200
+actual result = 200
+
+==> SUCCESS
+
+
+===================================================
+   Projet3 connection to DB from fastapi test
+===================================================
+
+request done at "/dbconnexion"
+
+expected result = 200
+actual result = 200
+
+==> SUCCESS
+
+
+========================================
+   Projet3 API availability test
+========================================
+
+request done at "/status"
+
+expected result = 200
+actual result = 200
+
+==> SUCCESS
+

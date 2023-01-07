@@ -1,0 +1,82 @@
+---
+version: "3.9"
+volumes:
+  pgdata:
+      driver: local
+      driver_opts:
+        type: none
+        o: bind
+        device: ./postgres_data
+  csvdata:
+      driver: local
+      driver_opts:
+        type: none
+        o: bind
+        device: csv_data
+  docker-entrypoint-initdb.d:
+      driver: local
+      driver_opts:
+        type: none
+        o: bind
+        device: docker-entrypoint-initdb.d
+  shared_dir:
+      driver: local
+      driver_opts:
+        type: none
+        o: bind
+        device: ./shared_dir
+services:
+  db:
+    image: postgres:15.1
+    container_name: 'postgresdb'
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 'datascience'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - csvdata:/csvdata
+      - docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    ports:
+      - 5432:5432
+  fastapi:
+    image: projet3-api:latest
+    container_name: 'fastapi'
+    depends_on:
+      - db
+    ports:
+      - 8000:8000
+    volumes:
+      - shared_dir:/projet3/result
+    environment:
+      LOG: "yes"
+      DB_USER: "projet3"
+      DB_PASSWORD: "datascience"
+      DB_HOST: "postgresdb"
+      DB_HOST_PORT: 5432
+      DB_NAME: "projet3"
+  apistatus:
+    image: api_status:latest
+    container_name: 'apistatus'
+    depends_on:
+      - fastapi
+    volumes:
+      - shared_dir:/projet3/result
+    environment:
+      LOG: "yes"
+  db_connexion:
+    image: db_connexion:latest
+    container_name: 'dbconnexion'
+    depends_on:
+      - fastapi
+    volumes:
+      - shared_dir:/projet3/result
+    environment:
+      LOG: "yes"
+  dbui:
+    image: adminer
+    container_name: 'dbui'
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 8080:8080   

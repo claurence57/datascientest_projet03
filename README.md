@@ -9,8 +9,10 @@ Le choix a été de le faire avec postgres, mais MySQL aurait bien sûr pu conve
 Le docker-compose permet de lancer 3 conteneurs permanents:
 - postgresdb: la DB chargé à partir du fichier csv - port 5432
 - fastapi: une API qui permet d'effectuer quelques requêtes sur la DB - port 8000
-- dbui: permet d'interroger la DB postgres via une interface Web - port 8080
-Les ports exposés sont les mêmes que les port d'origine.
+- dbui: permet d'interroger la DB postgres via une interface Web - port 8080. 
+Pour se connecter sur la DB, renseigner le nom du conteuner comme serveur c'est à dire: db ou postgresdb.
+
+remarque: les ports exposés sont les mêmes que les port dans les conteneurs.
 
 2 conteneurs sont lancés pour vérifier:
 - que l'api est accessible: apistatus

@@ -5,9 +5,10 @@ BASE_DOCKER="${BASE_DIR}/dockerfiles"
 API_STATUS_DIR="${BASE_DOCKER}/api_status"
 FASTAPI_DIR="${BASE_DOCKER}/fastapi"
 DBCONNEXION_DIR="${BASE_DOCKER}/db_connexion"
-#AUTHENTICATION_DIR="${BASE_DOCKER}/authentication"
-#AUTHORIZATION_DIR="${BASE_DOCKER}/authorization"
-#CONTENT_DIR="${BASE_DOCKER}/content"
+PG_DATA=${BASE_DIR}/postgres_data
+
+# Directory for postgres DB
+[[ -d $PG_DATA ]] || mkdir $PG_DATA
 
 # Build API_STATUS container
 cd ${API_STATUS_DIR}

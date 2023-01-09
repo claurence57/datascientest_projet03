@@ -6,9 +6,11 @@ API_STATUS_DIR="${BASE_DOCKER}/api_status"
 FASTAPI_DIR="${BASE_DOCKER}/fastapi"
 DBCONNEXION_DIR="${BASE_DOCKER}/db_connexion"
 PG_DATA=${BASE_DIR}/postgres_data
+LOG_DIR=${BASE_DIR}/shared_dir
 
 # Directory for postgres DB
 [[ -d $PG_DATA ]] || mkdir $PG_DATA
+[[ -d $LOG_DIR ]] || mkdir $LOG_DIR
 
 # Build API_STATUS container
 cd ${API_STATUS_DIR}

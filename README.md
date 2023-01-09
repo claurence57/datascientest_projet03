@@ -10,11 +10,16 @@ Le docker-compose permet de lancer 3 conteneurs permanents:
 - postgresdb: la DB chargé à partir du fichier csv - port 5432
 - fastapi: une API qui permet d'effectuer quelques requêtes sur la DB - port 8000
 - dbui: permet d'interroger la DB postgres via une interface Web - port 8080. [https://hub.docker.com/_/adminer/] 
-Les ports exposés sont les mêmes que les port d'origine.
+- dbui: permet d'interroger la DB postgres via une interface Web - port 8080. 
+
+remarques:
+- pour se connecter sur la DB, renseigner le nom du conteuner comme serveur c'est à dire: db ou postgresdb.
+- les ports exposés sont les mêmes que les port dans les conteneurs.
 
 2 conteneurs sont lancés pour vérifier:
 - que l'api est accessible: apistatus
 - que l'api arrive à se connecter sur la DB: db_connexion
+les logs sont dans le répertoire: shared_dir
 
 Dans l'api sont définis quatre points d'entrée:
 - /status: le status de l'API. renvoie une erreur 400 si elle n'est pas fonctionnelle
